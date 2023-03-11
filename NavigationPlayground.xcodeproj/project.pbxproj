@@ -11,6 +11,8 @@
 		ADDD9EDC29BD30870039F041 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDD9EDB29BD30870039F041 /* ContentView.swift */; };
 		ADDD9EDE29BD30880039F041 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADDD9EDD29BD30880039F041 /* Assets.xcassets */; };
 		ADDD9EE129BD30880039F041 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADDD9EE029BD30880039F041 /* Preview Assets.xcassets */; };
+		ADDD9EE829BD35B90039F041 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDD9EE729BD35B90039F041 /* ContentViewModel.swift */; };
+		ADDD9EEA29BD45A00039F041 /* Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDD9EE929BD45A00039F041 /* Platform.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		ADDD9EDB29BD30870039F041 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		ADDD9EDD29BD30880039F041 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ADDD9EE029BD30880039F041 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		ADDD9EE729BD35B90039F041 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		ADDD9EE929BD45A00039F041 /* Platform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Platform.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +57,8 @@
 			children = (
 				ADDD9ED929BD30870039F041 /* NavigationPlaygroundApp.swift */,
 				ADDD9EDB29BD30870039F041 /* ContentView.swift */,
+				ADDD9EE729BD35B90039F041 /* ContentViewModel.swift */,
+				ADDD9EE929BD45A00039F041 /* Platform.swift */,
 				ADDD9EDD29BD30880039F041 /* Assets.xcassets */,
 				ADDD9EDF29BD30880039F041 /* Preview Content */,
 			);
@@ -139,6 +145,8 @@
 			files = (
 				ADDD9EDC29BD30870039F041 /* ContentView.swift in Sources */,
 				ADDD9EDA29BD30870039F041 /* NavigationPlaygroundApp.swift in Sources */,
+				ADDD9EEA29BD45A00039F041 /* Platform.swift in Sources */,
+				ADDD9EE829BD35B90039F041 /* ContentViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
