@@ -23,7 +23,7 @@ struct ContentView: View {
         }
       }
       .navigationDestination(for: Platform.self) {
-        Text($0.name)
+        viewModel.serveView($0)
       }
       .navigationTitle("Platforms")
     }
