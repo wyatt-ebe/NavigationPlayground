@@ -8,56 +8,61 @@
 import SwiftUI
 
 class FlowCoordinator {
-  let flow: [ViewType]
+  static var flow: [ViewType] { [
+    .Platform(data: PlatformData(name: "Xbox", image: "xbox.logo", color: .green)),
+    .Platform(data: PlatformData(name: "Playstation", image: "playstation.logo", color: .blue))
+  ] }
   
-  init(flow: [ViewType]) {
-    self.flow = flow
+  let first: ViewType
+  let pattern: [ViewType:ViewType]
+  let popToRoot: () -> Void
+  
+  init(flow: [ViewType] = FlowCoordinator.flow,
+       popToRoot: @escaping () -> Void) {
+    (self.first, self.pattern) = FlowCoordinator.arrayToDict(flow)
+    self.popToRoot = popToRoot
   }
   
-  @ViewBuilder
-  func serveNextView(from source: ViewType?) -> some View {
+  static func arrayToDict(_ flow: [ViewType]) -> (first: ViewType, dict: [ViewType:ViewType]) {
+    guard flow.count > 0 else {
+      return (.Completion, [:])
+    }
+    var prev: ViewType = flow.first!
+    var pattern = [ViewType:ViewType]()
+    for type in flow[1...] {
+      pattern[prev] = type
+      prev = type
+    }
+    return (flow.first!, pattern)
+  }
+  
+  func getNextViewType(from source: ViewType?) -> ViewType {
     if let source = source,
-       let sourceIndex = flow.firstIndex(of: source) {
-      let nextIndex = sourceIndex + 1
-      if flow.count > nextIndex {
-        serveView(type: flow[nextIndex])
-      } else {
-        EmptyView() // popback
-      }
-    } else if let first = flow.first {
-      serveView(type: first) // assume if isn't found, presenting from root
+       let next = pattern[source] {
+      return next
     } else {
-      EmptyView() // Impossible, could be error or throw if preferred
+      return first
     }
   }
-  
+}
+
+class ViewFactory {
   @ViewBuilder
-  func serveView(type: ViewType) -> some View {
+  func create(type: ViewType,
+              coordinator: FlowCoordinator?) -> some View {
     switch type {
-    case .Xbox:
-      XboxView(viewModel: makeXboxViewModel())
-    case .Followup:
-      Text("Follow Up View")
-    case .Text(let string):
-      Text(string)
+    case .Platform(let data):
+      PlatformView(viewModel: .init(platform: data, coordinator: coordinator))
+    default:
+      EmptyView()
     }
   }
-  
-  func makeXboxViewModel() -> XboxViewModel {
-    let model = XboxViewModel()
-    model.coordinator = self
-    return model
-  }
- 
-//  @ViewBuilder
-//  func serveFollowUpView() -> some View {
-//    Text("Follow Up View")
-//  }
 }
 
 enum ViewType {
-  case Xbox
-  case Followup
+  case Platform(data: PlatformData)
+  case FollowUp
+  case Completion
   case Text(String)
 }
 

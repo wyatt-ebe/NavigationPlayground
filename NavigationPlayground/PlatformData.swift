@@ -7,10 +7,10 @@
 
 import SwiftUI
 
-struct Platform {
+struct PlatformData {
   let name: String
   let image: String
   let color: Color
 }
 
-extension Platform: Hashable { }
+extension PlatformData: Hashable { }

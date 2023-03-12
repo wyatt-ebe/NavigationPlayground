@@ -25,13 +25,23 @@ struct PlatformView: View {
           .background(.gray)
           .cornerRadius(18)
       }
+      Text("Pop to root")
+        .foregroundColor(.white)
+        .padding(12)
+        .background(.gray)
+        .cornerRadius(18)
+        .onTapGesture {
+          viewModel.coordinator?.popToRoot()
+        }
     }
   }
 }
 
-struct PlatformView: PreviewProvider {
+struct PlatformView_Previews: PreviewProvider {
   static var previews: some View {
-    let model = PlatformViewModel()
+    let model = PlatformViewModel(platform: PlatformData(name: "Preview",
+                                                     image: "xbox.logo",
+                                                     color: .green))
     PlatformView(viewModel: model)
   }
 }

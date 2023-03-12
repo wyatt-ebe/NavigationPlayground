@@ -12,10 +12,14 @@
 		ADDD9EDE29BD30880039F041 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADDD9EDD29BD30880039F041 /* Assets.xcassets */; };
 		ADDD9EE129BD30880039F041 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADDD9EE029BD30880039F041 /* Preview Assets.xcassets */; };
 		ADDD9EE829BD35B90039F041 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDD9EE729BD35B90039F041 /* ContentViewModel.swift */; };
-		ADDD9EEA29BD45A00039F041 /* Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDD9EE929BD45A00039F041 /* Platform.swift */; };
-		ADDD9EEC29BD48690039F041 /* XboxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDD9EEB29BD48690039F041 /* XboxView.swift */; };
-		ADDD9EEE29BD493B0039F041 /* XboxViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDD9EED29BD493B0039F041 /* XboxViewModel.swift */; };
+		ADDD9EEA29BD45A00039F041 /* PlatformData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDD9EE929BD45A00039F041 /* PlatformData.swift */; };
+		ADDD9EEC29BD48690039F041 /* PlatformView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDD9EEB29BD48690039F041 /* PlatformView.swift */; };
+		ADDD9EEE29BD493B0039F041 /* PlatformViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDD9EED29BD493B0039F041 /* PlatformViewModel.swift */; };
 		ADDD9EF029BE55E50039F041 /* FlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDD9EEF29BE55E50039F041 /* FlowCoordinator.swift */; };
+		ADDD9EF229BE602B0039F041 /* FollowUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDD9EF129BE602B0039F041 /* FollowUpView.swift */; };
+		ADDD9EF429BE60860039F041 /* FollowUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDD9EF329BE60860039F041 /* FollowUpViewModel.swift */; };
+		ADDD9EF629BE650C0039F041 /* CompletionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDD9EF529BE650C0039F041 /* CompletionView.swift */; };
+		ADDD9EF829BE65140039F041 /* CompletionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDD9EF729BE65140039F041 /* CompletionViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,10 +29,14 @@
 		ADDD9EDD29BD30880039F041 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ADDD9EE029BD30880039F041 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		ADDD9EE729BD35B90039F041 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
-		ADDD9EE929BD45A00039F041 /* Platform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Platform.swift; sourceTree = "<group>"; };
-		ADDD9EEB29BD48690039F041 /* XboxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XboxView.swift; sourceTree = "<group>"; };
-		ADDD9EED29BD493B0039F041 /* XboxViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XboxViewModel.swift; sourceTree = "<group>"; };
+		ADDD9EE929BD45A00039F041 /* PlatformData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatformData.swift; sourceTree = "<group>"; };
+		ADDD9EEB29BD48690039F041 /* PlatformView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatformView.swift; sourceTree = "<group>"; };
+		ADDD9EED29BD493B0039F041 /* PlatformViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatformViewModel.swift; sourceTree = "<group>"; };
 		ADDD9EEF29BE55E50039F041 /* FlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowCoordinator.swift; sourceTree = "<group>"; };
+		ADDD9EF129BE602B0039F041 /* FollowUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowUpView.swift; sourceTree = "<group>"; };
+		ADDD9EF329BE60860039F041 /* FollowUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowUpViewModel.swift; sourceTree = "<group>"; };
+		ADDD9EF529BE650C0039F041 /* CompletionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletionView.swift; sourceTree = "<group>"; };
+		ADDD9EF729BE65140039F041 /* CompletionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletionViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,9 +73,13 @@
 				ADDD9EDB29BD30870039F041 /* ContentView.swift */,
 				ADDD9EE729BD35B90039F041 /* ContentViewModel.swift */,
 				ADDD9EEF29BE55E50039F041 /* FlowCoordinator.swift */,
-				ADDD9EEB29BD48690039F041 /* XboxView.swift */,
-				ADDD9EED29BD493B0039F041 /* XboxViewModel.swift */,
-				ADDD9EE929BD45A00039F041 /* Platform.swift */,
+				ADDD9EEB29BD48690039F041 /* PlatformView.swift */,
+				ADDD9EED29BD493B0039F041 /* PlatformViewModel.swift */,
+				ADDD9EF129BE602B0039F041 /* FollowUpView.swift */,
+				ADDD9EF329BE60860039F041 /* FollowUpViewModel.swift */,
+				ADDD9EF529BE650C0039F041 /* CompletionView.swift */,
+				ADDD9EF729BE65140039F041 /* CompletionViewModel.swift */,
+				ADDD9EE929BD45A00039F041 /* PlatformData.swift */,
 				ADDD9EDD29BD30880039F041 /* Assets.xcassets */,
 				ADDD9EDF29BD30880039F041 /* Preview Content */,
 			);
@@ -152,13 +164,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADDD9EEC29BD48690039F041 /* XboxView.swift in Sources */,
+				ADDD9EF629BE650C0039F041 /* CompletionView.swift in Sources */,
+				ADDD9EF229BE602B0039F041 /* FollowUpView.swift in Sources */,
+				ADDD9EEC29BD48690039F041 /* PlatformView.swift in Sources */,
+				ADDD9EF429BE60860039F041 /* FollowUpViewModel.swift in Sources */,
+				ADDD9EF829BE65140039F041 /* CompletionViewModel.swift in Sources */,
 				ADDD9EF029BE55E50039F041 /* FlowCoordinator.swift in Sources */,
 				ADDD9EDC29BD30870039F041 /* ContentView.swift in Sources */,
 				ADDD9EDA29BD30870039F041 /* NavigationPlaygroundApp.swift in Sources */,
-				ADDD9EEA29BD45A00039F041 /* Platform.swift in Sources */,
+				ADDD9EEA29BD45A00039F041 /* PlatformData.swift in Sources */,
 				ADDD9EE829BD35B90039F041 /* ContentViewModel.swift in Sources */,
-				ADDD9EEE29BD493B0039F041 /* XboxViewModel.swift in Sources */,
+				ADDD9EEE29BD493B0039F041 /* PlatformViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
