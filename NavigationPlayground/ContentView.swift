@@ -17,11 +17,14 @@ struct ContentView: View {
           Label(platform.name, systemImage: platform.image)
             .foregroundColor(platform.color)
         }
+        .navigationDestination(for: PlatformData.self) {
+          viewModel.serveView($0)
+        }
+        .navigationDestination(for: ViewType.self) {
+          viewModel.serveView($0)
+        }
+        .navigationTitle("Platforms")
       }
-      .navigationDestination(for: PlatformData.self) {
-        viewModel.serveView($0)
-      }
-      .navigationTitle("Platforms")
     }
   }
 }

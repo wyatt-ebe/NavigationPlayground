@@ -14,7 +14,7 @@ struct FollowUpView: View {
     VStack {
       Text("Follow Up View")
         .padding(.bottom, 12)
-      NavigationLink(destination: viewModel.serveView) {
+      NavigationLink(value: viewModel.serveViewData()) {
         Text("Next")
           .foregroundColor(.white)
           .padding(12)
@@ -27,7 +27,7 @@ struct FollowUpView: View {
 
 struct FollowUpView_Previews: PreviewProvider {
   static var previews: some View {
-    let model = FollowUpViewModel()
+    let model = FollowUpViewModel(coordinator: nil)
     FollowUpView(viewModel: model)
   }
 }

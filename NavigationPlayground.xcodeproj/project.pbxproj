@@ -20,6 +20,7 @@
 		ADDD9EF429BE60860039F041 /* FollowUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDD9EF329BE60860039F041 /* FollowUpViewModel.swift */; };
 		ADDD9EF629BE650C0039F041 /* CompletionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDD9EF529BE650C0039F041 /* CompletionView.swift */; };
 		ADDD9EF829BE65140039F041 /* CompletionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDD9EF729BE65140039F041 /* CompletionViewModel.swift */; };
+		ADDD9EFA29BEA2A80039F041 /* FollowUpData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDD9EF929BEA2A80039F041 /* FollowUpData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		ADDD9EF329BE60860039F041 /* FollowUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowUpViewModel.swift; sourceTree = "<group>"; };
 		ADDD9EF529BE650C0039F041 /* CompletionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletionView.swift; sourceTree = "<group>"; };
 		ADDD9EF729BE65140039F041 /* CompletionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletionViewModel.swift; sourceTree = "<group>"; };
+		ADDD9EF929BEA2A80039F041 /* FollowUpData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowUpData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				ADDD9EF529BE650C0039F041 /* CompletionView.swift */,
 				ADDD9EF729BE65140039F041 /* CompletionViewModel.swift */,
 				ADDD9EE929BD45A00039F041 /* PlatformData.swift */,
+				ADDD9EF929BEA2A80039F041 /* FollowUpData.swift */,
 				ADDD9EDD29BD30880039F041 /* Assets.xcassets */,
 				ADDD9EDF29BD30880039F041 /* Preview Content */,
 			);
@@ -167,6 +170,7 @@
 				ADDD9EF629BE650C0039F041 /* CompletionView.swift in Sources */,
 				ADDD9EF229BE602B0039F041 /* FollowUpView.swift in Sources */,
 				ADDD9EEC29BD48690039F041 /* PlatformView.swift in Sources */,
+				ADDD9EFA29BEA2A80039F041 /* FollowUpData.swift in Sources */,
 				ADDD9EF429BE60860039F041 /* FollowUpViewModel.swift in Sources */,
 				ADDD9EF829BE65140039F041 /* CompletionViewModel.swift in Sources */,
 				ADDD9EF029BE55E50039F041 /* FlowCoordinator.swift in Sources */,

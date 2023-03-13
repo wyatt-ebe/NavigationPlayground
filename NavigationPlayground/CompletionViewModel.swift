@@ -8,9 +8,9 @@
 import SwiftUI
 
 class CompletionViewModel {
-//  weak var coordinator: FlowCoordinator?
+  weak var coordinator: FlowCoordinator?
   
-  func completionAction() {
-//    coordinator?.triggerPopback()
+  init(coordinator: FlowCoordinator?) {
+    self.coordinator = coordinator
   }
 }

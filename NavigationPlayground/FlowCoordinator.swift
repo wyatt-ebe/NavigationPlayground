@@ -8,10 +8,14 @@
 import SwiftUI
 
 class FlowCoordinator {
-  static var flow: [ViewType] { [
-    .Platform(data: PlatformData(name: "Xbox", image: "xbox.logo", color: .green)),
-    .Platform(data: PlatformData(name: "Playstation", image: "playstation.logo", color: .blue))
-  ] }
+  static var flow: [ViewType] {
+    [
+      .Platform(data: PlatformData(name: "Xbox", image: "xbox.logo", color: .green)),
+      .Platform(data: PlatformData(name: "Playstation", image: "playstation.logo", color: .blue)),
+      .FollowUp,
+      .Completion
+    ]
+  }
   
   let first: ViewType
   let pattern: [ViewType:ViewType]
@@ -53,8 +57,10 @@ class ViewFactory {
     switch type {
     case .Platform(let data):
       PlatformView(viewModel: .init(platform: data, coordinator: coordinator))
-    default:
-      EmptyView()
+    case .FollowUp:
+      FollowUpView(viewModel: .init(coordinator: coordinator))
+    case .Completion:
+      CompletionView(viewModel: .init(coordinator: coordinator))
     }
   }
 }
@@ -63,7 +69,6 @@ enum ViewType {
   case Platform(data: PlatformData)
   case FollowUp
   case Completion
-  case Text(String)
 }
 
 extension ViewType: Hashable { }

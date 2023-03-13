@@ -21,13 +21,11 @@ class PlatformViewModel {
     self.coordinator = coordinator
   }
   
-  func serveViewData() -> PlatformData {
+  func serveViewData() -> ViewType {
     let current = ViewType.Platform(data: platform)
-    if let type = coordinator?.getNextViewType(from: current),
-       case .Platform(let data) = type {
-      return data
-    } else {
-      return PlatformData(name: "Fail", image: "figure.walk", color: .black)
+    if let next = coordinator?.getNextViewType(from: current) {
+      return next
     }
+    return .Completion
   }
 }

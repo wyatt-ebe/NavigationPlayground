@@ -8,16 +8,17 @@
 import SwiftUI
 
 class FollowUpViewModel {
-//  weak var coordinator: FlowCoordinator?
+  weak var coordinator: FlowCoordinator?
   
-  @ViewBuilder
-  func serveView() -> some View {
-    CompletionView(viewModel: .init())
-//    if let coordinator = coordinator {
-//      coordinator.serveNextView(from: .FollowUp)
-//    } else {
-//      EmptyView()
-//    }
+  init(coordinator: FlowCoordinator?) {
+    self.coordinator = coordinator
+  }
+  
+  func serveViewData() -> ViewType {
+    if let type = coordinator?.getNextViewType(from: .FollowUp) {
+      return type
+    }
+    return .Completion
   }
 }
 

@@ -14,13 +14,13 @@ struct CompletionView: View {
     VStack {
       Text("Completion View")
         .padding(.bottom, 12)
-      Text("Popback")
+      Text("Pop to root")
         .foregroundColor(.white)
         .padding(12)
         .background(.gray)
         .cornerRadius(18)
         .onTapGesture {
-          viewModel.completionAction()
+          viewModel.coordinator?.popToRoot()
         }
     }
   }
@@ -30,7 +30,7 @@ struct CompletionView: View {
 
 struct CompletionView_Previews: PreviewProvider {
   static var previews: some View {
-    let model = CompletionViewModel()
+    let model = CompletionViewModel(coordinator: nil)
     CompletionView(viewModel: model)
   }
 }
