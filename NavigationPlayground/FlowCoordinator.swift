@@ -8,23 +8,20 @@
 import SwiftUI
 
 class FlowCoordinator {
-  static var flow: [ViewType] {
-    [
-      .Platform(data: PlatformData(name: "Xbox", image: "xbox.logo", color: .green)),
-      .Platform(data: PlatformData(name: "Playstation", image: "playstation.logo", color: .blue)),
-      .FollowUp,
-      .Completion
-    ]
-  }
-  
+  let flow: [ViewType]
   let first: ViewType
   let pattern: [ViewType:ViewType]
-  let popToRoot: () -> Void
   
-  init(flow: [ViewType] = FlowCoordinator.flow,
-       popToRoot: @escaping () -> Void) {
+  let popToRoot: () -> Void
+  let pushToPath: (ViewType) -> Void
+  
+  init(flow: [ViewType],
+       popToRoot: @escaping () -> Void,
+       pushToPath: @escaping (ViewType) -> Void) {
+    self.flow = flow
     (self.first, self.pattern) = FlowCoordinator.arrayToDict(flow)
     self.popToRoot = popToRoot
+    self.pushToPath = pushToPath
   }
   
   static func arrayToDict(_ flow: [ViewType]) -> (first: ViewType, dict: [ViewType:ViewType]) {

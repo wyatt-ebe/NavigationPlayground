@@ -25,15 +25,8 @@ struct PlatformView: View {
           .background(.gray)
           .cornerRadius(18)
       }
-      Text("Pop to root")
-        .foregroundColor(.white)
-        .padding(12)
-        .background(.gray)
-        .cornerRadius(18)
-        .onTapGesture {
-          viewModel.coordinator?.popToRoot()
-        }
     }
+    .navigationTitle(viewModel.name)
   }
 }
 

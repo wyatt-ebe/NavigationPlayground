@@ -14,11 +14,9 @@ class FollowUpViewModel {
     self.coordinator = coordinator
   }
   
-  func serveViewData() -> ViewType {
-    if let type = coordinator?.getNextViewType(from: .FollowUp) {
-      return type
-    }
-    return .Completion
+  func pushNextView() {
+    guard let type = coordinator?.getNextViewType(from: .FollowUp) else { return }
+    coordinator?.pushToPath(type)
   }
 }
 

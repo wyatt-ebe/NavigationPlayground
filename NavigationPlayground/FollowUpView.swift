@@ -12,15 +12,16 @@ struct FollowUpView: View {
   
   var body: some View {
     VStack {
-      Text("Follow Up View")
+      Text("Programmatic Push")
         .padding(.bottom, 12)
-      NavigationLink(value: viewModel.serveViewData()) {
-        Text("Next")
-          .foregroundColor(.white)
-          .padding(12)
-          .background(.gray)
-          .cornerRadius(18)
-      }
+      Text("Next")
+        .foregroundColor(.white)
+        .padding(12)
+        .background(.gray)
+        .cornerRadius(18)
+        .onTapGesture {
+          viewModel.pushNextView()
+        }
     }
   }
 }

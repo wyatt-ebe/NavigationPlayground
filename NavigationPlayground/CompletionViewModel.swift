@@ -13,4 +13,8 @@ class CompletionViewModel {
   init(coordinator: FlowCoordinator?) {
     self.coordinator = coordinator
   }
+  
+  func popToRoot() {
+    coordinator?.popToRoot()
+  }
 }

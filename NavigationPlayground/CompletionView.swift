@@ -20,12 +20,10 @@ struct CompletionView: View {
         .background(.gray)
         .cornerRadius(18)
         .onTapGesture {
-          viewModel.coordinator?.popToRoot()
+          viewModel.popToRoot()
         }
     }
   }
-
-  // TODO: Hidden nav object, driven by binding
 }
 
 struct CompletionView_Previews: PreviewProvider {
